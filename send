@@ -1,0 +1,20 @@
+#Despues cuando lo pase al otro coso, voy a tener que instalarlo
+import telebot
+from telegram import ParseMode
+#token that can be generated talking with @BotFather on telegram
+mtoken = '1330678562:AAG8Ago9DFtIHNqaBwI3_bqZ_wgij1RcIRU'
+import telegram
+Chat_id = 1290810219
+
+
+def send(msg,chat_id, token=mtoken):
+	"""
+	Send a mensage to a telegram user specified on chatId
+	chat_id must be a number!
+	"""
+	bot = telegram.Bot(token=token)
+	bot.sendMessage(chat_id=chat_id, text=msg, parse_mode=ParseMode.HTML)
+
+
+bot = telebot.TeleBot(mtoken)
+send("1111",Chat_id)
